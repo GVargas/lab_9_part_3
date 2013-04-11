@@ -2,8 +2,12 @@ void setup() {
   size(500, 500);
   background(255, 255, 255);
 }
+int x = 100;
+int y = 100;
 
 void draw() {
+  background(255, 255, 255);
+  drawFace(x,y);
   
 }
 
@@ -28,6 +32,17 @@ void drawFace(int x, int y) {
   
 }
 
-void mouseClicked() {
-  drawFace(mouseX, mouseY); 
+void keyPressed() {
+  if(keyCode == UP) {
+  y = y - 5;
+  }
+  if(keyCode == DOWN) {
+  y = y + 5;
+  }
+  if(keyCode == RIGHT) {
+  x = x + 5;
+  }
+  if(keyCode == LEFT) {
+  x = x - 5;
+ }
 }
